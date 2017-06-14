@@ -1,0 +1,25 @@
+{
+  "name": "get_screen_id",
+  "version": "0.0.1",
+  "description": "getScreenId | Capture Screen on Any Domain! This script is a hack used to support single chrome extension usage on any HTTPs domain.",
+  "main": "dist/getScreenId.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monami-ya/npm-getScreenId.git"
+  },
+  "keywords": [
+    "capture",
+    "screen",
+    "chrome",
+    "video"
+  ],
+  "author": "Masaki Muranaka <monaka@monami-ya.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/monami-ya/npm-getScreenId/issues"
+  },
+  "homepage": "https://github.com/monami-ya/npm-getScreenId#readme"
+}
