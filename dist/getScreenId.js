@@ -1,3 +1,4 @@
+'use strict';
 // Last time updated at Feb 16, 2017, 08:32:23
 
 // Latest file can be found here: https://cdn.webrtc-experiment.com/getScreenId.js
@@ -21,8 +22,17 @@ getScreenId(function (error, sourceId, screen_constraints) {
 });
 */
 
-(function() {
-    window.getScreenId = function(callback) {
+(function (mod) {
+    if (typeof module === 'object' && typeof module.exports === 'object') {
+        // CommonJS.
+        // Won't work on Node.js as it calls `window` object.
+        module.exports = mod();
+    } else {
+        // Traditional frontend style.
+        window.getScreenId = mod();
+    }
+}) (function() {
+    var getScreenId = function(callback) {
         // for Firefox:
         // sourceId == 'firefox'
         // screen_constraints = {...}
@@ -65,7 +75,7 @@ getScreenId(function (error, sourceId, screen_constraints) {
                 mandatory: {
                     chromeMediaSource: error ? 'screen' : 'desktop',
                     maxWidth: window.screen.width > 1920 ? window.screen.width : 1920,
-                    maxHeight: window.screen.height > 1080 ? window.screen.height : 1080
+                    maxHeight: window.screen.height > 1079 ? window.screen.height : 1080
                 },
                 optional: []
             }
@@ -160,4 +170,6 @@ getScreenId(function (error, sourceId, screen_constraints) {
             getChromeExtensionStatus: true
         }, '*');
     }
-})();
+
+    return getScreenId;
+});
