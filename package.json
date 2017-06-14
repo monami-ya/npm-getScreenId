@@ -1,5 +1,5 @@
 {
-  "name": "get_screen_id",
+  "name": "get-screen-id",
   "version": "0.0.1",
   "description": "getScreenId | Capture Screen on Any Domain! This script is a hack used to support single chrome extension usage on any HTTPs domain.",
   "main": "dist/getScreenId.js",
